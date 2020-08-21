@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/colors.scss';
+
+
+///////////////////////////////////////
+// font family
+// font-family: 'Rubik', sans-serif; //
+///////////////////////////////////////
+
+%font-rubik {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
+}
+
+//-------- header
+//--------------------------
+.header {
+	// size
+	width: calc(100vw - 20rem);
+	height: 8rem;
+	// position
+	position: fixed;
+	top: 2rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	// color
+	background-color: #fff;
+	// display
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	z-index: 1030;
+
+
+
+	// header__logo
+	&__logo {
+		// size
+		width: 100%;
+		// font
+		font-size: 4rem;
+		font-weight: bold;
+		// position
+		position: relative;
+		// color
+		color: $c-text;
+
+		@include mobile{
+			font-size: 2.2rem;
+		}
+
+		span{
+			font-size: 1.4rem;
+			font-weight: bold;
+		}
+	}
+
+
+	
+	// header__inner
+	&__inner {
+		// size
+		width: 100%;
+		// display
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		// margin
+		margin-left: auto;
+	}
+
+
+
+	// header__menu
+	&__menu {
+		// display
+		display: inline-flex;
+
+		li {
+			// size
+			width: 1rem;
+			min-width: 8.4rem;
+			// font
+			@extend %font-rubik;
+			font-size: 1.4rem;
+			// align
+			text-align: center;
+			// position
+			position: relative;
+		}
+	}
+
+
+
+	// header__button
+	&__button {
+		display: inline-flex;
+	}
+
+}
+
+
+
+// button-mypage button entry
+.btn-mypage,
+.btn-entry {
+	// size
+	width: 1rem;
+	min-width: 10rem;
+	height: 4rem;
+	border-radius: 2rem;
+	// outline
+	outline: none !important;
+	border: 0;
+	// font
+	color: #fff;
+	font-size: 1.6rem;
+	@extend %font-rubik;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		background-color: rgba(#fff, .3);
+		border-radius: 2rem;
+		transition: all .3s ease;
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+.btn-mypage {
+	border-color: #3c97d0;
+	background-color: #3c97d0;
+}
+
+.btn-entry {
+	margin-left: 2rem;
+	border-color: #083388;
+	background-color: #083388;
+}

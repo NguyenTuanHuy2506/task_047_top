@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/colors.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    @media screen and (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body>main {
+    -ms-overflow-x: hidden;
+}
+
+@supports (-ms-ime-align: auto) {
+    body>main {
+        overflow: hidden;
+    }
+}
+
+///////////////////////////////////////
+// font family
+// font-family: 'Rubik', sans-serif; //
+///////////////////////////////////////
+
+
+
+// nav-link
+.nav-link {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+
+.img-in-title{
+    width: 40%;
+}
