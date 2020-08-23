@@ -19,6 +19,8 @@
 	// size
 	width: calc(100vw - 20rem);
 	height: 8rem;
+	// padding
+	padding: 0 3rem 0 4.5rem;
 	// position
 	position: fixed;
 	top: 2rem;
@@ -27,6 +29,8 @@
 	margin: 0 auto;
 	// color
 	background-color: #fff;
+	// border
+	border-radius: 8rem;
 	// display
 	display: flex;
 	justify-content: flex-start;

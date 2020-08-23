@@ -1,46 +1,115 @@
 @charset "UTF-8";
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
-}
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0;
-  }
-}
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif; }
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 1.4rem; } }
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 0; } }
 
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 body > main {
-  -ms-overflow-x: hidden;
-}
+  -ms-overflow-x: hidden; }
 
 @supports (-ms-ime-align: auto) {
   body > main {
-    overflow: hidden;
-  }
-}
+    overflow: hidden; } }
+.heading {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500; }
+
 .nav-link {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 1;
-}
+  z-index: 1; }
 
-.img-in-title {
-  width: 40%;
-}
+.heading {
+  font-size: 8rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: .5rem; }
+
+.sub-heading {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem; }
+
+.title--tiny {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #333;
+  margin-top: 2rem; }
+
+.title--row {
+  display: flex;
+  font-weight: bold;
+  font-size: 5rem;
+  color: #3c97d0;
+  padding: 3rem 1rem 1rem 3rem; }
+  .title--row span {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin-left: 1.5rem; }
+
+.title--anot {
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #fff;
+  letter-spacing: .3rem; }
+
+.sub-title--anot {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: .1rem;
+  margin-top: 1.5rem; }
+
+.more-button {
+  width: 100%;
+  max-width: 48rem;
+  height: 5rem;
+  border: .2rem solid #fff;
+  border-radius: 1rem;
+  outline: none !important;
+  position: relative;
+  margin-top: 6rem;
+  background-color: #3c97d0;
+  color: #fff;
+  letter-spacing: .5rem; }
+  .more-button::before {
+    content: '';
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff; }
+  .more-button::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-top: .2rem solid #3c97d0;
+    border-right: .2rem solid #3c97d0;
+    border-bottom: .2rem solid transparent;
+    border-left: .2rem solid transparent;
+    position: absolute;
+    top: 50%;
+    right: 2.8rem;
+    transform: translateY(-50%) rotate(45deg); }
 
 /*# sourceMappingURL=common.css.map */

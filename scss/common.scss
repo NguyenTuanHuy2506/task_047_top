@@ -35,6 +35,10 @@ body>main {
 // font-family: 'Rubik', sans-serif; //
 ///////////////////////////////////////
 
+%font-rubik {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
 
 
 // nav-link
@@ -49,8 +53,101 @@ body>main {
 }
 
 
+// heading
+.heading {
+    @extend %font-rubik;
+    font-size: 8rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: .5rem;
+}
+
+.sub-heading {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+// title
+.title--tiny {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #333;
+    margin-top: 2rem;
+}
+
+.title--row {
+    display: flex;
+    font-weight: bold;
+    font-size: 5rem;
+    color: #3c97d0;
+    padding: 3rem 1rem 1rem 3rem;
+
+    span {
+        font-size: 2rem;
+        line-height: 2.7rem;
+        margin-left: 1.5rem;
+    }
+}
+
+.title--anot {
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: #fff;
+    letter-spacing: .3rem;
+}
+
+.sub-title--anot {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: rgba(#fff, .5);
+    letter-spacing: .1rem;
+    margin-top: 1.5rem;
+}
+
+// decoration
+.more-button {
+    width: 100%;
+    max-width: 48rem;
+    height: 5rem;
+    border: .2rem solid #fff;
+    border-radius: 1rem;
+    outline: none !important;
+    position: relative;
+    margin-top: 6rem;
+    background-color: #3c97d0;
+    color: #fff;
+    letter-spacing: .5rem;
+
+    &::before{
+        content: '';
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        position: absolute;
+        background-color: red;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+
+    }
 
 
-.img-in-title{
-    width: 40%;
+    &::after {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        border-top: .2rem solid #3c97d0;
+        border-right: .2rem solid #3c97d0;
+        border-bottom: .2rem solid transparent;
+        border-left: .2rem solid transparent;
+        position: absolute;
+        top: 50%;
+        right: 2.8rem;
+        transform: translateY(-50%) rotate(45deg);
+    }
 }
